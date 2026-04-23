@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ef7d9e29fb.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://api.iconify.design/fa-solid:file-pdf.svg?color=%23e02424" type="image/svg+xml">
+    <link rel="stylesheet" href="main.css">
+    <title>Pdf-Viewer</title>
+</head>
+<body>
+    <div class="menu-bar">
+        <button class="btn" id="prev-page" type="button">
+            <span class="page-btn">
+                Previuos Page <i class="fas fa-circle-left"></i>
+            </span>
+        </button>
+
+        <div class="mid">
+            <div class="input-container">
+            <label for="file-upload" class="custom-file-upload">
+                <i class="fa-solid fa-file-import"></i>
+            </label>
+            <input type="file" id="file-upload" accept="application/pdf">
+            </div>
+            
+            <span class="page-info">
+                Page <span id="page-num"></span> | <span id="page-count"></span>
+            </span>
+        </div>
+
+        <button class="btn" id="next-page" type="button">
+            <span class="page-btn">
+                Next Page<i class="fas fa-circle-right"></i>
+            </span>
+        </button>
+
+
+    </div>
+
+
+
+    <div id="canvas-container">
+        <canvas id="pdf-render"></canvas>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
